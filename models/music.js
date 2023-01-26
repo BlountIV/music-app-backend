@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 const musicSchema = new mongoose.Schema({
-    title: String,
-    artist: String,
-    img_src: String,
-    src: String
+    title: {type: String, require: true},
+    artist: {type: String, require: true},
+    imgSrc: {type: String, require: true},
+    src: {type: String, require: true}
 })
 
 const Music = mongoose.model('Music', musicSchema)
